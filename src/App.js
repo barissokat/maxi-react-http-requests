@@ -32,7 +32,9 @@ function App () {
       <section>
         {!isLoading && movies.length > 0 && <MoviesList movies={movies} />}
         {!isLoading && movies.length === 0 && <p>Found no movies.</p>}
-        {isLoading && <p>Loading...</p>}
+        <div className='loading-box'>
+          {isLoading && <div className='loading' />}
+        </div>
       </section>
     </>
   )
